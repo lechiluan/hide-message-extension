@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Messenger Message Hider",
+    "version": "1.0",
+    "description": "Blurs Messenger messages and sidebar. Hover to reveal.",
+    "permissions": [],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://www.messenger.com/*",
+                "https://www.facebook.com/messages/*",
+                "https://chat.zalo.me/*"
+            ],
+            "css": [
+                "content.css"
+            ]
+        }
+    ]
+}

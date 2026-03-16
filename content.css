@@ -1,0 +1,134 @@
+/* 
+   Messenger Blur - Privacy Mode (Universal for Messenger.com and Facebook.com/messages)
+*/
+
+/* 1. Sidebar - Conversation List Names and Snippets */
+div[role="navigation"] [role="gridcell"] span[dir="auto"],
+div[role="navigation"] [role="gridcell"] [role="none"],
+[aria-label="Danh sách đoạn chat"] [role="gridcell"] span[dir="auto"],
+[aria-label="Chats"] [role="gridcell"] span[dir="auto"],
+/* Zalo Sidebar - More Greedy */
+.conv-item-title,
+.conv-item-last-msg,
+.chat-item__info__name,
+.chat-item__info__snippet,
+.msg-item .name,
+.msg-item .desc,
+[class*="conv-item"] [class*="title"],
+[class*="conv-item"] [class*="last-msg"],
+[class*="chat-item"] [class*="name"],
+[class*="chat-item"] [class*="snippet"] {
+  filter: blur(4px) !important;
+  transition: filter 0.2s ease-in-out !important;
+}
+
+div[role="navigation"] [role="gridcell"]:hover span[dir="auto"],
+div[role="navigation"] [role="gridcell"]:hover [role="none"],
+[aria-label="Danh sách đoạn chat"] [role="gridcell"]:hover span[dir="auto"],
+[aria-label="Chats"] [role="gridcell"]:hover span[dir="auto"],
+/* Zalo Sidebar Hover */
+.conv-item:hover .conv-item-title,
+.conv-item:hover .conv-item-last-msg,
+.msg-item:hover .name,
+.msg-item:hover .desc,
+.chat-item:hover .chat-item__info__name,
+.chat-item:hover .chat-item__info__snippet,
+[class*="conv-item"]:hover [class*="title"],
+[class*="conv-item"]:hover [class*="last-msg"] {
+  filter: blur(0) !important;
+}
+
+/* 2. Chat Header - Name and Status */
+div[role="main"] > div:first-child span[dir="auto"],
+[aria-label="Conversation Information"] span[dir="auto"],
+[aria-label="Thông tin về cuộc trò chuyện"] span[dir="auto"],
+/* Zalo Header */
+.header-chat .name,
+.header-chat .title,
+#chat-header .name,
+[class*="header"] [class*="name"],
+[class*="header"] [class*="title"] {
+  filter: blur(4px) !important;
+  transition: filter 0.2s ease-in-out !important;
+}
+
+div[role="main"] > div:first-child:hover span[dir="auto"],
+[aria-label="Conversation Information"]:hover span[dir="auto"],
+[aria-label="Thông tin về cuộc trò chuyện"]:hover span[dir="auto"],
+/* Zalo Header Hover */
+.header-chat:hover .name,
+.header-chat:hover .title,
+#chat-header:hover .name,
+[class*="header"]:hover [class*="name"] {
+  filter: blur(0) !important;
+}
+
+/* 3. Message Content - Chat Bubbles & Media */
+div[role="main"] [role="row"] [dir="auto"],
+div[role="main"] [role="row"] [role="none"],
+div[role="main"] [data-testid="message-container"],
+[aria-label="Tin nhắn"] [role="row"] [dir="auto"],
+[aria-label="Messages"] [role="row"] [dir="auto"],
+/* Images/Media in Chat */
+div[role="main"] [role="row"] img,
+div[role="main"] [role="row"] video,
+[aria-label="Tin nhắn"] [role="row"] img,
+/* Zalo Messages - Greedy selection */
+.message-text,
+.card-content,
+.bubble-content,
+.msg-content,
+.quote-banner,
+[id^="msg-"] [class*="text"],
+[class*="message-item"] [class*="content"],
+[class*="bubble"],
+.message-item img {
+  filter: blur(5px) !important;
+  transition: filter 0.2s ease-in-out !important;
+}
+
+div[role="main"] [role="row"]:hover [dir="auto"],
+div[role="main"] [role="row"]:hover [role="none"],
+div[role="main"] [role="row"]:hover img,
+div[role="main"] [role="row"]:hover video,
+div[role="main"] [data-testid="message-container"]:hover,
+[aria-label="Tin nhắn"] [role="row"]:hover [dir="auto"],
+[aria-label="Tin nhắn"] [role="row"]:hover img,
+[aria-label="Messages"] [role="row"]:hover [dir="auto"],
+/* Zalo Messages Hover - Target parents to ensure reveal */
+.message-item:hover .message-text,
+.message-item:hover .bubble-content,
+.message-item:hover .msg-content,
+.message-item:hover img,
+.chat-item:hover .msg-content,
+[id^="msg-"]:hover [class*="text"],
+[class*="message-item"]:hover [class*="content"],
+[class*="bubble"]:hover {
+  filter: blur(0) !important;
+}
+
+/* 4. KEEP AVATARS CLEAR (Only in sidebar/header) */
+div[role="navigation"] img,
+[aria-label="Conversation Information"] img,
+[aria-label="Thông tin về cuộc trò chuyện"] img,
+.conv-item img,
+.avatar,
+[class*="avatar"] {
+  filter: none !important;
+}
+
+/* 5. Input Area - DISABLED as per user request */
+/*
+#chatInput,
+#rich-input-chat,
+.footer-chat-input,
+.rich-input,
+[class*="input-area"] {
+  filter: none !important;
+}
+*/
+
+/* Global transition for smoother feel */
+* {
+  transition: filter 0.2s ease;
+}
