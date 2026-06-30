@@ -1,0 +1,38 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="96" y1="64" x2="416" y2="448" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1D4ED8"/>
+      <stop offset="0.52" stop-color="#2563EB"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="bubble" x1="137" y1="130" x2="375" y2="335" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DFF7FF"/>
+    </linearGradient>
+    <filter id="softShadow" x="70" y="77" width="380" height="333" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#0F172A" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+
+  <g filter="url(#softShadow)">
+    <path d="M119 230C119 171.458 166.458 124 225 124H287C345.542 124 393 171.458 393 230C393 288.542 345.542 336 287 336H231.5L164.5 386C153.9 393.91 139 386.345 139 373.12V324.072C126.543 305.784 119 283.356 119 230Z" fill="url(#bubble)"/>
+  </g>
+
+  <path d="M171 226H341" stroke="#B7C7D9" stroke-width="27" stroke-linecap="round"/>
+  <path d="M183 277H298" stroke="#B7C7D9" stroke-width="27" stroke-linecap="round"/>
+  <path d="M167 226H339" stroke="#E7F2F8" stroke-width="12" stroke-linecap="round" stroke-dasharray="18 24"/>
+  <path d="M181 277H300" stroke="#E7F2F8" stroke-width="12" stroke-linecap="round" stroke-dasharray="16 22"/>
+
+  <path d="M152 166L360 374" stroke="#0F172A" stroke-width="31" stroke-linecap="round" opacity="0.2"/>
+  <path d="M147 154L365 372" stroke="#FFFFFF" stroke-width="25" stroke-linecap="round"/>
+  <path d="M147 154L365 372" stroke="#0F172A" stroke-width="11" stroke-linecap="round" opacity="0.72"/>
+
+  <path d="M170 383C197.983 333.995 240.605 307 285 307C329.395 307 372.017 333.995 400 383C372.017 432.005 329.395 459 285 459C240.605 459 197.983 432.005 170 383Z" fill="#0F172A" opacity="0.9"/>
+  <path d="M212 383C234.181 353.599 258.392 339 285 339C311.608 339 335.819 353.599 358 383C335.819 412.401 311.608 427 285 427C258.392 427 234.181 412.401 212 383Z" fill="#FFFFFF"/>
+  <circle cx="285" cy="383" r="28" fill="#14B8A6"/>
+  <circle cx="285" cy="383" r="12" fill="#0F172A"/>
+  <path d="M219 317L351 449" stroke="#FFFFFF" stroke-width="25" stroke-linecap="round"/>
+  <path d="M219 317L351 449" stroke="#0F172A" stroke-width="11" stroke-linecap="round" opacity="0.76"/>
+</svg>
